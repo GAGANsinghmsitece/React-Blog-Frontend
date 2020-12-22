@@ -2,6 +2,7 @@ import React,{useEffect} from 'react';
 import '../assets/css/Header.css';
 import bloglogo from '../assets/images/logo.png';
 import {BsSearch} from 'react-icons/bs';
+import {Link} from 'react-router-dom';
 function Header(){
 	//initialise value of scrolled as false and setScrolled can be used to update it.
 	const[scrolled,setScrolled]=React.useState(false);
@@ -37,9 +38,9 @@ function Header(){
 		    </div>
 		</div>
 		<div className={x.join(' ')}>
-		<a href="#">HOME</a>
-		<a href="#">CATEGORY</a>
-		<a href="#">POST TAGS</a>
+		<Link to="/">HOME</Link>
+		<Link to="/Category">CATEGORY</Link>
+		<Link to="/Tags">POST TAGS</Link>
 		</div>
 		</div>
 		);

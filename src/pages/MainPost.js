@@ -1,4 +1,6 @@
 import React from 'react';
+import {useParams} from 'react-router-dom';
+import {withRouter} from 'react-router';
 import Header from '../components/Header.js';
 import Banner from '../components/Banner.js';
 import Reserved from '../components/Reserved.js';
@@ -12,7 +14,8 @@ class MainPost extends React.Component{
     };
   }
   componentDidMount(){
-    fetch('/api/post/1')
+    const id=this.props.match.params.id;
+    fetch('/api/post/'+id)
     .then(res=>res.json())
     .then((result)=>{
       this.setState({
@@ -41,4 +44,4 @@ class MainPost extends React.Component{
         );
   }
 }
-export default MainPost;
+export default withRouter(MainPost);

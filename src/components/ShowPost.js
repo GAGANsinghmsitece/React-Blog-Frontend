@@ -27,7 +27,7 @@ function ShowPost(props){
                  <div dangerouslySetInnerHTML={{__html:props.data.content}}/>
               </div>
               <div className="navigation-area">
-                 <div class="row change_row_post">
+                 <div className="row change_row_post">
                  <Quicklinks left="True"/>
                  <Quicklinks left="False"/>
                  </div>
