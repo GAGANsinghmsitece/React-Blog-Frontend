@@ -1,0 +1,16 @@
+.tags-widget ul li {
+    display: inline-block;
+    background: rgba(130, 139, 178, 0.3);
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin-right: 2px;
+    text-align: left;
+}
+.tags-widget ul li a {
+    font-weight: 300;
+    color: #828bb2;
+}

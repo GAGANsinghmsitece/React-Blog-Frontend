@@ -1,0 +1,33 @@
+.SideColumn{
+	margin-top: 40px;
+	margin-right: 4%;
+	width:100%;
+}
+.single-widget{
+	border: 1px solid #eee;
+	padding: 30px;
+	margin-bottom: 30px;
+	background: #1e1c27;
+}
+.single-widget{
+	border-top-color: rgb(238, 238, 238);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(238, 238, 238);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(238, 238, 238);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(238, 238, 238);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    padding: 30px;
+    margin-bottom: 30px;
+    background: #1e1c27;
+}

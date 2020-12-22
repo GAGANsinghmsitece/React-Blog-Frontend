@@ -1,0 +1,21 @@
+.singlePostColumn{
+	flex: 0 0 50%;
+	max-width: 40.8%;
+	position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.MainPostColumn {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    margin-left:7%;
+    margin-top: 40px;
+}

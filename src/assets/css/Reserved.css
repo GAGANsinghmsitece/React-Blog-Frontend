@@ -1,0 +1,29 @@
+.footer-bottom {
+    padding-top: 20px;
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #000;
+    color: #828bb2;
+    width:100%;
+    text-align: center;
+}
+.text-center {
+    text-align: center !important;
+    width:100%;
+}
