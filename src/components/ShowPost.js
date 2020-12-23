@@ -6,7 +6,6 @@ import Quicklinks from './Quicklinks.js';
 import Server from '../api/Main.js';
 import "../assets/css/ShowPost.css";
 function ShowPost(props){
-  console.log(props.data);
   const imgurl=Server+props.data.image;
   const posttags=props.data.posttags;
   return(
@@ -28,8 +27,8 @@ function ShowPost(props){
               </div>
               <div className="navigation-area">
                  <div className="row change_row_post">
-                 <Quicklinks left="True"/>
-                 <Quicklinks left="False"/>
+                 <Quicklinks data={props.prev} left="True"/>
+                 <Quicklinks data={props.next}left="False"/>
                  </div>
               </div>
           </div>

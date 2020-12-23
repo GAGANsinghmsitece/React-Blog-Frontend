@@ -10,28 +10,40 @@ class MainPost extends React.Component{
     super(props);
     this.state={
       isLoading:false,
-      post:undefined
+      post:undefined,
+      prev:undefined,
+      next:undefined
     };
   }
   componentDidMount(){
     const id=this.props.match.params.id;
+    this.fetchData(id);
+  }
+  componentDidUpdate(prevProps){
+    if(this.props.match.params.id!=prevProps.match.params.id){
+      this.fetchData(this.props.match.params.id);
+    }
+  }
+  fetchData(id){
     fetch('/api/post/'+id)
     .then(res=>res.json())
     .then((result)=>{
       this.setState({
         isLoading:true,
-        post:result.post
+        post:result.post,
+        prev:result.prev,
+        next:result.next
       });
     });
   }
   render(){
-    const{isLoading,post}=this.state;
+    const{isLoading,post,prev,next}=this.state;
     if(isLoading)
        return(
          <div>
             <Header/>
             <Banner text={post.headline}/>
-            <ShowPost data={post}/>
+            <ShowPost data={post} prev={prev} next={next}/>
             <Reserved/>
          </div>
        );
