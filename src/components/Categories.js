@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/Categories.css';
 import Bullet from '../assets/images/bullet.png';
+import {Link} from 'react-router-dom';
 class Categories extends React.Component{
 	constructor(props){
 		super(props);
@@ -29,9 +30,9 @@ class Categories extends React.Component{
 				<li>
 				{categories.map((item)=>
 
-					   <a href="" className="justify-content-between align-items-center d-flex">
+					   <Link to={"/Category/"+item.id} className="justify-content-between align-items-center d-flex">
 						   <p><img src={Bullet}/>{item.text}</p>
-						 </a>
+						 </Link>
 				)}
 				</li>
 				</ul>

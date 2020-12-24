@@ -25,7 +25,6 @@ class Category extends React.Component{
 	}
 	render(){
 		const {isLoading,categories}=this.state;
-		console.log(categories);
 		if(isLoading)
 		return(
 			<div>

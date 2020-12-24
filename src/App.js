@@ -6,13 +6,17 @@ import Category from './pages/Category.js';
 import Home from './pages/Home.js';
 import PostTags from './pages/PostTags.js';
 import MainPost from './pages/MainPost.js';
+import Category_detail from './pages/Category_detail.js';
+import TagDetail from './pages/TagDetail.js';
 function App() {
   return (
     <main>
       <Switch>
         <Route path="/" component={Home} exact/>
-        <Route path="/Category" component={Category}/>
-        <Route path="/Tags" component={PostTags}/>
+        <Route path="/Category" component={Category} exact/>
+        <Route path="/Category/:id" component={Category_detail} />
+        <Route path="/Tags" component={PostTags} exact/>
+        <Route path="/Tags/:id" component={TagDetail} />
         <Route path="/Post/:id" component={MainPost} exact/>
       </Switch>
     </main>

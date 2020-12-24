@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../assets/css/PostTags.css';
 class PostTags extends React.Component{
 	constructor(props){
@@ -25,7 +26,7 @@ class PostTags extends React.Component{
 			<div className="single-widget tags-widget">
 			   <h4 className="title">Post Tags</h4>
 				 <ul>
-				 {tags.map((item)=><li><a href="">{item.text}</a></li>)}
+				 {tags.map((item)=><li><Link to={"/Tags/"+item.id}>{item.text}</Link></li>)}
 				 </ul>
 		  </div>
 		);
