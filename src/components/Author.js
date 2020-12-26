@@ -15,7 +15,7 @@ class Author extends React.Component{
 		this.fetchData();
 	}
 	fetchData(){
-		fetch('/api/author')
+		fetch(Server+'/api/author')
     .then(res=>res.json())
     .then((result)=>{
       this.setState({

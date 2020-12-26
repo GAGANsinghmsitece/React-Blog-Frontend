@@ -15,7 +15,7 @@ class Category extends React.Component{
 		};
 	}
 	componentDidMount(){
-		fetch("/api/categories")
+		fetch(Server+"/api/categories")
 		.then(res=>res.json())
 		.then((result)=>{
 			this.setState({

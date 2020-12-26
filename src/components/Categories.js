@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/css/Categories.css';
 import Bullet from '../assets/images/bullet.png';
 import {Link} from 'react-router-dom';
+import Server from '../api/Main.js';
 class Categories extends React.Component{
 	constructor(props){
 		super(props);
@@ -11,7 +12,7 @@ class Categories extends React.Component{
 		}
 	}
 	componentDidMount(){
-		fetch("/api/categories")
+		fetch(Server+"/api/categories")
 		.then(res=>res.json())
 		.then((result)=>{
 			this.setState({

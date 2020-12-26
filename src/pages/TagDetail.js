@@ -5,6 +5,7 @@ import Banner from  "../components/Banner.js";
 import MainContent from "../components/MainContent.js";
 import Reserved from "../components/Reserved.js";
 import Preloader from "../components/Preloader.js";
+import Server from '../api/Main.js';
 class TagDetail extends React.Component{
   constructor(props){
     super(props);
@@ -24,7 +25,7 @@ class TagDetail extends React.Component{
     }
   }
   fetchData(id){
-    fetch('/api/posttags/'+id)
+    fetch(Server+'/api/posttags/'+id)
     .then(res=>res.json())
     .then((result)=>{
       this.setState({

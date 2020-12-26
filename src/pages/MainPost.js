@@ -6,6 +6,7 @@ import Banner from '../components/Banner.js';
 import Reserved from '../components/Reserved.js';
 import ShowPost from '../components/ShowPost.js';
 import Preloader from '../components/Preloader.js';
+import Server from '../api/Main.js';
 class MainPost extends React.Component{
   constructor(props){
     super(props);
@@ -27,7 +28,7 @@ class MainPost extends React.Component{
     }
   }
   fetchData(id){
-    fetch('/api/post/'+id)
+    fetch(Server+'/api/post/'+id)
     .then(res=>res.json())
     .then((result)=>{
       this.setState({

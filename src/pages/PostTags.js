@@ -15,7 +15,7 @@ class PostTags extends React.Component{
 		};
 	}
 	componentDidMount(){
-		fetch("/api/posttags")
+		fetch(Server+"/api/posttags")
 		.then(res=>res.json())
 		.then((result)=>{
 			this.setState({

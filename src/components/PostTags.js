@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/PostTags.css';
+import Server from '../api/Main.js';
 class PostTags extends React.Component{
 	constructor(props){
 		super(props);
@@ -10,7 +11,7 @@ class PostTags extends React.Component{
 		};
 	}
 	componentDidMount(){
-		fetch("/api/posttags")
+		fetch(Server+"/api/posttags")
 		.then(res=>res.json())
 		.then((result)=>{
 			this.setState({
