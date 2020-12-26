@@ -1,2 +1,2 @@
-const Server="http://127.0.0.1:8000";
+const Server="https://webmash.pythonanywhere.com";
 export default Server;

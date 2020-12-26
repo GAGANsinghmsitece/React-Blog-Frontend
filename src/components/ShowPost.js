@@ -23,7 +23,7 @@ function ShowPost(props){
                       <ShowPostWriter postdate={props.data.date} writerinfo={props.data.writer}/>
                     </div>
                  </div>
-                 <div dangerouslySetInnerHTML={{__html:props.data.content}}/>
+                 <div className="Contentpara" dangerouslySetInnerHTML={{__html:props.data.content}}/>
               </div>
               <div className="navigation-area">
                  <div className="row change_row_post">

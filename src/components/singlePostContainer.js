@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import SinglePost from './singlePost.js';
 import '../assets/css/SinglePostContainer.css';
 import {BsArrowLeftShort,BsArrowRightShort} from 'react-icons/bs';
@@ -10,6 +10,10 @@ function SinglePostContainer(props){
 	var array=[];
 	var prev='';
 	var next='';
+	var pagination_style={};
+	if(totalpage==1){
+		pagination_style={display:'none'};
+	}
 	if(currentpage==1){
 		prev=<li className="page-item disabled"><a className="page-link ArrowChange" aria-label="Previous"><BsArrowLeftShort/></a></li>;
 	}else{
@@ -38,7 +42,7 @@ function SinglePostContainer(props){
 	return(
 		<div className="MainPostColumn">
 		{data.map((message,idx) =><SinglePost data={message}/>)}
-		<div className="main_pagination">
+		<div className="main_pagination" style={pagination_style}>
 		  <nav className="blog-pagination justify-content-center d-flex">
 			<ul className={x.join(' ')}>
 			{prev}
