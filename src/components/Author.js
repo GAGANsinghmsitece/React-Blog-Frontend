@@ -37,11 +37,6 @@ class Author extends React.Component{
 				 <p className="p-text">
 				    {author.bio}
 				 </p>
-				 <ul className="social-links">
-				   <li><a href=""><FiFacebook/></a></li>
-					 <li><a href=""><i className="fa fa-twitter"><AiOutlineTwitter/></i></a></li>
-					 <li><a href=""></a></li>
-				 </ul>
 			</div>
 		);
 	  }
@@ -52,4 +47,11 @@ class Author extends React.Component{
 		}
 	}
 }
+/*
+for future versions
+<ul className="social-links">
+	<li><a href=""><FiFacebook/></a></li>
+	<li><a href=""><i className="fa fa-twitter"><AiOutlineTwitter/></i></a></li>
+	<li><a href=""></a></li>
+</ul>*/
 export default Author;
