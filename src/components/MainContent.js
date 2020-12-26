@@ -5,7 +5,7 @@ import '../assets/css/MainContent.css';
 function MainContent(props){
 	return(
 		<div className="MainContent">
-		    <SinglePostContainer posts={props.posts}/>
+		    <SinglePostContainer posts={props.posts} totalpage={props.totalpage} currentpage={props.currentpage}/>
 		    <SideColumn/>
 		</div>
 	);

@@ -4,6 +4,7 @@ import Header from "../components/Header.js";
 import Banner from  "../components/Banner.js";
 import MainContent from "../components/MainContent.js";
 import Reserved from "../components/Reserved.js";
+import Preloader from "../components/Preloader.js";
 class Category_detail extends React.Component{
   constructor(props){
     super(props);
@@ -47,7 +48,7 @@ class Category_detail extends React.Component{
     else {
       return(
         <div>
-        ...Loading
+           <Preloader/>
         </div>
       );
     }

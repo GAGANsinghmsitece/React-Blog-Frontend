@@ -5,6 +5,7 @@ import Banner from '../components/Banner.js';
 import Table from '../components/Table.js';
 import Reserved from '../components/Reserved.js';
 import Server from '../api/Main.js';
+import Preloader from '../components/Preloader.js';
 class Category extends React.Component{
 	constructor(props){
 		super(props);
@@ -31,13 +32,13 @@ class Category extends React.Component{
 			    <Header/>
 			    <Banner text="Categories"/>
 			    <h3 className="mb-30">Categories</h3>
-			    <Table headname="Category" res={categories}/>
+			    <Table headname="Category" res={categories} link="/Category/"/>
 			    <Reserved/>
 			</div>
 		);
 		else
 			return(
-		        <div>...Loading</div>
+		        <div><Preloader/></div>
 		    );
 	}
 }

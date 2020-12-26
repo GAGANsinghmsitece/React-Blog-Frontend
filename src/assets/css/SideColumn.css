@@ -1,7 +1,14 @@
 .SideColumn{
 	margin-top: 40px;
-	margin-right: 4%;
 	width:100%;
+}
+@media(min-width:992px){
+	.SideColumn{
+		-ms-flex: 0 0 33.333333%;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		margin-left: 18px;
+	}
 }
 .single-widget{
 	border: 1px solid #eee;

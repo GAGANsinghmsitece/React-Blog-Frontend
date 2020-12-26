@@ -1,3 +1,29 @@
 .MainContent{
 	display: flex;
+	padding-left: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 15px;
+}
+@media(max-width:960px){
+	.MainContent{
+		display: block;
+		max-width:720px;
+	}
+}
+@media(min-width:960px){
+	.MainContent{
+		max-width:960px;
+	}
+}
+@media(min-width:1200px){
+	.MainContent{
+		max-width: 1170px;
+	}
+}
+@media(max-width:768px){
+	.MainContent{
+		display: block;
+		max-width:540px;
+	}
 }

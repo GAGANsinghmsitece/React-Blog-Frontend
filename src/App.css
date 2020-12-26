@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.gradient-bg, #search_input_box, .protfolio-widget .social-links li a:hover, .tags-widget ul li:hover, .main_blog_details .user_details .float-left a:hover, .comments-area .btn-reply:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .single-footer-widget .sub-btn {
+    color:#fffff;
+    background: -webkit-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+    background: -moz-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+    background: -o-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+    background: -ms-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+    background: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+}
+a {
+    transition: all 0.3s ease 0s;
+}

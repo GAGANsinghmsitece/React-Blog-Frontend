@@ -3,6 +3,7 @@ import '../assets/css/Header.css';
 import bloglogo from '../assets/images/logo.png';
 import {BsSearch} from 'react-icons/bs';
 import {Link} from 'react-router-dom';
+import MobileOverlay from "./MobileOverlay.js";
 function Header(){
 	//initialise value of scrolled as false and setScrolled can be used to update it.
 	const[scrolled,setScrolled]=React.useState(false);
@@ -27,6 +28,7 @@ function Header(){
 	}
 	return(
 		<div>
+		<div className="Hooker">
 		<div className="Header">
 		    <div className="title_row">
 		        <div className="title_container">
@@ -42,6 +44,8 @@ function Header(){
 		<Link to="/Category">CATEGORY</Link>
 		<Link to="/Tags">POST TAGS</Link>
 		</div>
+		</div>
+		<MobileOverlay/>
 		</div>
 		);
 }

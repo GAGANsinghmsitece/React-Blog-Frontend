@@ -5,6 +5,7 @@ import Header from '../components/Header.js';
 import Banner from '../components/Banner.js';
 import Reserved from '../components/Reserved.js';
 import ShowPost from '../components/ShowPost.js';
+import Preloader from '../components/Preloader.js';
 class MainPost extends React.Component{
   constructor(props){
     super(props);
@@ -50,8 +51,7 @@ class MainPost extends React.Component{
     else
         return(
           <div>
-             <Header/>
-             <Reserved/>
+             <Preloader/>
           </div>
         );
   }

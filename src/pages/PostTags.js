@@ -5,6 +5,7 @@ import Banner from '../components/Banner.js';
 import Table from '../components/Table.js';
 import Reserved from '../components/Reserved.js';
 import Server from '../api/Main.js';
+import Preloader from '../components/Preloader.js';
 class PostTags extends React.Component{
 	constructor(props){
 		super(props);
@@ -31,13 +32,13 @@ class PostTags extends React.Component{
 			    <Header/>
 			    <Banner text="Post Tags"/>
 			    <h3 className="mb-30">Post Tags</h3>
-			    <Table headname="Post Tags" res={posttags}/>
+			    <Table headname="Post Tags" res={posttags} link="/Tags/"/>
 			    <Reserved/>
 			</div>
 		);
 		else
 			return(
-		        <div>...Loading</div>
+		        <div><Preloader/></div>
 		    );
 	}
 }
