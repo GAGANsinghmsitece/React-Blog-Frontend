@@ -1,5 +1,5 @@
 import React from 'react';
-import{Route,Switch} from 'react-router-dom';
+import{BrowserRouter,Route,Switch} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Category from './pages/Category.js';
@@ -12,6 +12,7 @@ import Error from './pages/Error.js';
 function App() {
   return (
     <main>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/" component={Home} exact/>
         <Route path="/page/:pagenumber" component={Home} exact/>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Post/:id" component={MainPost} exact/>
         <Route component={Error}/>
       </Switch>
+      </BrowserRouter/>
     </main>
   );
 }
