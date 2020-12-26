@@ -22,6 +22,7 @@ class MainPost extends React.Component{
   }
   componentDidUpdate(prevProps){
     if(this.props.match.params.id!=prevProps.match.params.id){
+      this.setState({isLoading:false});
       this.fetchData(this.props.match.params.id);
     }
   }

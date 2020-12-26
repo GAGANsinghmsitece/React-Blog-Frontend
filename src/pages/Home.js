@@ -40,6 +40,7 @@ class Home extends React.Component{
 	}
 	componentDidUpdate(prevProps){
 		if(prevProps.match.params.pagenumber!=this.props.match.params.pagenumber){
+			this.setState({isLoaded:false});
 			this.MainFetch(this.props.match.params.pagenumber);
 		}
 	}
